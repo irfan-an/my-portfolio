@@ -148,6 +148,7 @@ main hr{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
+    cursor: pointer;
 }
 
 .project-card{
@@ -211,6 +212,91 @@ main hr{
 
 .project-buttons a:hover{
     background:#8d84ff;
+}
+
+.EducationSection{
+    max-width: 80vw;
+    margin: 100px auto;
+    text-align: center;
+}
+.education-card{
+    background: #1b1b32;
+    padding:30px;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.education-card:hover{
+    transform: translate(-8px);
+    box-shadow:0 10px 25px rgba(170,107,228,.4);
+}
+.education-card h2{
+color: rgb(170,107,228);
+}
+.education-card span{
+    color: gray;
+}
+
+.certificateSection{
+    max-width: 80vw;
+    margin: 100px auto;
+    text-align: center;
+}
+.certificate-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+.certificate-card{
+    background: #1b1b32;
+    padding: 25px;
+    border-radius: 15px;
+}
+.certificate-card a{
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background: rgb(170, 107, 228);
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+.contactSection{
+    max-width: 80vw;
+    margin: 100px auto;
+}
+.contactSection h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.contact-info{
+    flex: 1;
+}
+form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+form input, form textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    border:none;
+    border-radius: 10px;
+}
+form button{
+    background: rgb(170,107,228);
+    color: white;
+    border: none;
+    padding:15px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .leftSection .buttons{
     padding: 50px 0;
@@ -277,25 +363,26 @@ main hr{
     font-size: 9px;
 }
 footer{
-    background-color: rgb(17, 37, 55);
-    /* height: 150px; */
-    margin-top: 400px;
+    background: #1b1b32;
+    color: white;
+    padding: 40px 10%;
 }
-.footer{
+.footer-container{
     display: flex;
-    padding: 23px  122px;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.footer ul{
+.footer-container ul{
     list-style: none;
+    padding: 0;
 }
-.footer > div{
-    width: 223px;
+.footer-container a{
+    text-decoration: none;
+    color: white;
+    line-height: 2;
 }
-
-footer .footer-rigths{
-    color: gray;
+.copyright{
     text-align: center;
-    padding: 12px;
+    margin-top: 20px;
+    color: gray;
 }
