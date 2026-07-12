@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Irfan Ansari Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="iocn" href="favicon.ico">
     <link rel="stylesheet" href="/style.css">
@@ -17,7 +18,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="navbar">
             <div class="left">Irfan's Portfolio</div>
             <div class="rigth">
                 <ul>
@@ -33,16 +34,29 @@
 
     <main>
         <section class="firstSection">
-            <div class="leftSection">Hi,I'm <span class="purple"> Irfan</span>
-                <div class="aboutme">Java Developer • Frontend Developer • CSE Student</div>
-                <div class="aboutsme">Building responsive websites and web applications while learning DSA and Saleforce.</div>
-                <span id="element"></span>
+            <div class="leftSection">
+                <p class="intro">Hi, I'm</p> 
+                <h2>
+                    <span class="purple">Irfan Ansari</span>
+                </h2>
+                <h3>
+                    Java Developer • Frontend Developer
+                </h3>
+                <p class="description">I build resposive websites and Java applications.
+                    Currently improving my skills in Data Structure & Algorithms, Salesforce, and modern Web Development.
+                </p>
+                <p id="element"></p>
+                
                 <div class="buttons">
                     <a href="resume.pdf" download class="btn">Download Resume</a>
-                    <a href="https://github.com/irfan-an" target="_blank" class="btn">Visit GitHub</a>
-                    <a href="https://www.linkedin.com/in/irfan-ansari-66294a341/" target="_blank" class="btn">Visit
+                    <a href="https://github.com/irfan-an"
+                     target="_blank"
+                      class="btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/irfan-ansari-66294a341/" 
+                    target="_blank" 
+                    class="btn">
                         Linkedin</a>
-                </div>
+                </div>   
             </div>
             <div class="rightSection">
                 <img src="/images/Irfan's photo.jpeg" alt="Irfan's Photo">
@@ -285,14 +299,8 @@
     <!-- type.js -->
 
 
-    <script src="script.js"></script>
+    
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Fronted Developer', 'Java Developer', 'Problem Solver', 'CSE Student'],
-            typeSpeed: 50,
-        });
-    </script>
 </body>
-
+<script src="script.js"></script>
 </html>
