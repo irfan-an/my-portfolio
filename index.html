@@ -35,7 +35,7 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                <p class="intro">Hi, I'm</p> 
+                <p class="intro">Hi, I'm</p>
                 <h2>
                     <span class="purple">Irfan Ansari</span>
                 </h2>
@@ -43,20 +43,17 @@
                     Java Developer • Frontend Developer
                 </h3>
                 <p class="description">I build resposive websites and Java applications.
-                    Currently improving my skills in Data Structure & Algorithms, Salesforce, and modern Web Development.
+                    Currently improving my skills in Data Structure & Algorithms, Salesforce, and modern Web
+                    Development.
                 </p>
                 <p id="element"></p>
-                
+
                 <div class="buttons">
                     <a href="resume.pdf" download class="btn">Download Resume</a>
-                    <a href="https://github.com/irfan-an"
-                     target="_blank"
-                      class="btn">GitHub</a>
-                    <a href="https://www.linkedin.com/in/irfan-ansari-66294a341/" 
-                    target="_blank" 
-                    class="btn">
+                    <a href="https://github.com/irfan-an" target="_blank" class="btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/irfan-ansari-66294a341/" target="_blank" class="btn">
                         Linkedin</a>
-                </div>   
+                </div>
             </div>
             <div class="rightSection">
                 <img src="/images/Irfan's photo.jpeg" alt="Irfan's Photo">
@@ -225,18 +222,19 @@
             </p>
             <div class="certificate-container">
                 <!-- Certificate 1 -->
-                 <div class="certificate-card">
+                <div class="certificate-card">
                     <img src="/images/Java.png" alt="Java Certificate">
                     <h2>Java Programming</h2>
-                    <h4>Issued by  :Infosys Springboard</h4>
-                    <p>Successfully completed Programming fundamentals including OOP, Collections, Exception Handling and File Handling</p>
+                    <h4>Issued by :Infosys Springboard</h4>
+                    <p>Successfully completed Programming fundamentals including OOP, Collections, Exception Handling
+                        and File Handling</p>
                     <span>2026</span>
                     <a href="" target="_blank">
                         View Certificate
                     </a>
-                 </div>
-                 <!-- Certificate 2 -->
-                  <div class="certificate-card">
+                </div>
+                <!-- Certificate 2 -->
+                <div class="certificate-card">
                     <img src="images/salesforce.png" alt="SaleForce">
                     <h2>Salesforce Trailhead</h2>
                     <h4>Issued by : Salesforce</h4>
@@ -245,7 +243,7 @@
                     <a href="certificate/salesforce.pdf" target="_blank">
                         View Certificate
                     </a>
-                  </div>
+                </div>
             </div>
         </section>
         <section id="contact" class="contactSection">
@@ -297,10 +295,32 @@
         </p>
     </footer>
     <!-- type.js -->
-
-
-    
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <!-- AI Chatbot Widget -->
+      <div id="chatbot-toggle">
+        <span id="chatbot-icon">💬</span>
+        <span id="chatbot-badge">1</span>
+    </div>
+
+    <div id="chatbot-window">
+        <div id="chatbot-header">
+            <span>Ask about Irfan 🤖</span>
+            <button id="chatbot-close">&times;</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-quick-replies">
+            <button class="quick-reply">Skills</button>
+            <button class="quick-reply">Projects</button>
+            <button class="quick-reply">Contact</button>
+            <button class="quick-reply">Resume</button>
+        </div>
+        <form id="chatbot-form">
+            <input type="text" id="chatbot-input" placeholder="Type a question..." autocomplete="off">
+            <button type="submit">➤</button>
+        </form>
+    </div>
 </body>
+<script src="chatbot.js"></script>
 <script src="script.js"></script>
+
 </html>
