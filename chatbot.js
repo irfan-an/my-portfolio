@@ -1,20 +1,14 @@
 /* =========================================================
    AI CHATBOT — chatbot.js
-   -----------------------------------------------------------
-   Works out of the box with ZERO API key (rule-based, free).
-   When you're ready for a "real" LLM, see the
-   USE_REAL_AI section near the bottom — flip one flag and
-   point it at your own backend (never call an AI API key
-   directly from client-side JS, it will get stolen).
    ========================================================= */
 
-// ---- 1. Your knowledge base (edit this to keep it accurate) ----
+// ---- 1. knowledge based ----
 const IRFAN_INFO = {
     name: "Irfan Ansari",
     greeting: "Hi! I'm Irfan's portfolio assistant 🤖 Ask me about his skills, projects, education, or how to contact him.",
     skills: "Irfan works with Java, HTML, CSS, JavaScript, GitHub, and Salesforce. He's currently sharpening his Data Structures & Algorithms and OOP skills.",
-    projects: "Irfan has built a Portfolio Website (HTML/CSS/JS), a Placement Management System (Java, OOP), and a Weather App (JavaScript + Weather API). Scroll to the Projects section to see them live!",
-    education: "Irfan is a B.Tech CSE student (2024–2028) at Technocrats Institute of Technology (Excellence), Bhopal.",
+    projects: "Irfan has built a Portfolio Website (HTML/CSS/JS), a Attendance Management System (Based on Full-Stack), and a Weather App (JavaScript + Weather API). Scroll to the Projects section to see them live!",
+    education: "Irfan is a B.Tech CSE student (2024–2028),CGPA 6.57(2nd year) at Technocrats Institute of Technology (Excellence), Bhopal.",
     contact: "You can reach Irfan at a.irfan8235@gmail.com or +91 8235676717. He's based in Bhopal, Madhya Pradesh.",
     resume: "You can download Irfan's resume using the 'Download Resume' button at the top of the page.",
     github: "Check out Irfan's GitHub: https://github.com/irfan-an",
@@ -62,21 +56,8 @@ function getBotReply(userText) {
     return IRFAN_INFO.fallback;
 }
 
-// =========================================================
-// USE_REAL_AI (optional upgrade path)
-// -----------------------------------------------------------
-// To use a real LLM (OpenAI, Gemini, Claude, etc.) instead of
-// the rule-based replies above:
-//   1. Set USE_REAL_AI = true below.
-//   2. Deploy a tiny serverless function (Vercel/Cloudflare
-//      Worker/Netlify Function) that holds your API key and
-//      forwards the prompt to the AI provider. NEVER put an
-//      API key directly in this file — it's public.
-//   3. Point BACKEND_URL at that function's endpoint.
-// The function replaceGetBotReplyWithAI() below shows the shape.
-// =========================================================
 const USE_REAL_AI = false;
-const BACKEND_URL = "https://your-backend.example.com/api/chat"; // <-- replace when ready
+const BACKEND_URL = "https://your-backend.example.com/api/chat";
 
 async function getBotReplyAI(userText) {
     try {
