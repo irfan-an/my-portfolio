@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Irfan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <main class="auth-wrap">
+      <section class="auth-card">
+        <h1>Irfan's Portfolio</h1>
+        <p class="auth-sub" id="auth-sub">Login karke portfolio dekhein</p>
+
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" id="tab-login" role="tab">
+            Login
+          </button>
+          <button type="button" class="tab" id="tab-signup" role="tab">
+            Sign up
+          </button>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <label id="name-field" class="hidden">
+            Name
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              autocomplete="name"
+            />
+          </label>
+
+          <label>
+            Email
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </label>
+
+          <label>
+            Password
+            <div class="pw-row">
+              <input
+                type="password"
+                id="password"
+                placeholder="Min 6 characters"
+                autocomplete="current-password"
+                required
+              />
+              <button type="button" id="toggle-pw" aria-label="Show password">
+                Show
+              </button>
+            </div>
+          </label>
+
+          <p class="error" id="error" role="alert"></p>
+
+          <button type="submit" class="submit" id="submit-btn">Login</button>
+        </form>
+
+        <button type="button" class="guest" id="guest-btn">
+          Guest ki tarah continue karo
+        </button>
+      </section>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>
